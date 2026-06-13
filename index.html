@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============================================================
+       SEO
+       ============================================================ -->
+  <title>Visus AV — Direct-View LED Video Walls | California</title>
+  <meta name="description" content="Visus AV designs and installs bespoke direct-view LED video walls for luxury homes and custom builds across California. Gallery-quality picture, any size, any room." />
+
+  <!-- ============================================================
+       OPEN GRAPH
+       OG IMAGE: replace assets/images/og-image.jpg with a
+       compelling 1200×630 image of a finished installation.
+       ============================================================ -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Visus AV — Direct-View LED Video Walls" />
+  <meta property="og:description" content="Bespoke direct-view LED video walls for luxury residential interiors. California-based." />
+  <meta property="og:image"       content="assets/images/og-image.jpg" />
+  <meta property="og:url"         content="https://visusav.com" />
+  <meta property="og:site_name"   content="Visus AV" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Visus AV — Direct-View LED Video Walls" />
+  <meta name="twitter:description" content="Bespoke direct-view LED video walls for luxury residential interiors." />
+  <meta name="twitter:image"       content="assets/images/og-image.jpg" />
+
+  <!-- ============================================================
+       FAVICON
+       Replace favicon.jpg with your actual icon file.
+       Note: JPG has no transparency — use a square image with a solid
+       (ideally dark, to match the site) background. For best results
+       also add an apple-touch-icon and 16px/32px variants.
+       ============================================================ -->
+  <link rel="icon" type="image/jpeg" sizes="32x32" href="assets/images/favicon.jpg" />
+
+  <!-- ============================================================
+       GOOGLE FONTS
+       Display: Cormorant Garamond (elegant serif)
+       Body:    Inter (clean sans-serif)
+       ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       HEADER / NAVIGATION
+       Sticky, transparent on load, gains dark background on scroll.
+       ============================================================ -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+
+      <!-- WORDMARK: update the href when you move to a custom domain -->
+      <a href="#" class="nav-wordmark" aria-label="Visus AV — Home">Visus AV</a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Primary navigation">
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#why-led"  class="nav-link">Why LED</a>
+        <a href="#work"     class="nav-link">Work</a>
+        <a href="#process"  class="nav-link">Process</a>
+        <a href="#contact"  class="nav-link">Contact</a>
+        <a href="#contact"  class="btn btn--outline nav-cta">Book a Consultation</a>
+      </nav>
+
+      <!-- Mobile hamburger toggle -->
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         1. HERO
+         Full-viewport section with overlay gradient over background image.
+         ============================================================ -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+
+      <!-- ============================================================
+           HERO SLIDESHOW
+           The background cross-fades through the slides below.
+
+           TO ADD A SLIDE: copy any .hero__slide line and point its
+             background-image at a new file (e.g. assets/images/hero-5.jpg).
+           TO REMOVE A SLIDE: delete its line.
+           ORDER = display order. Give the FIRST slide the "is-active"
+             class — it shows first and is what appears before the
+             JavaScript runs (and if JS is disabled).
+
+           Cycle speed is set by HERO_INTERVAL in js/main.js.
+           Recommended images: 2560×1440 or larger, dramatic installed
+           LED walls with darker edges so the headline stays legible.
+           ============================================================ -->
+      <div class="hero__slides" aria-hidden="true">
+        <div class="hero__slide is-active" style="background-image: url('assets/images/hero-1.jpg');"></div>
+        <div class="hero__slide"           style="background-image: url('assets/images/hero-2.jpg');"></div>
+        <div class="hero__slide"           style="background-image: url('assets/images/hero-3.jpg');"></div>
+        <div class="hero__slide"           style="background-image: url('assets/images/hero-4.jpg');"></div>
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container">
+        <!-- Inner wrapper is width-constrained and left-aligned so the
+             copy sits in the left third (rule of thirds), leaving the
+             imagery open on the right. -->
+        <div class="hero__content">
+          <p class="hero__eyebrow animate-on-scroll">Direct-View LED Integration</p>
+          <h1 class="hero__heading animate-on-scroll" id="hero-heading">
+            See it as it's<br><em>meant to be seen.</em>
+          </h1>
+          <p class="hero__subhead animate-on-scroll">
+            We turn a single wall into a seamless, gallery-quality cinematic display —
+            designed for your home, calibrated for your life.
+          </p>
+          <div class="hero__actions animate-on-scroll">
+            <a href="#contact" class="btn btn--primary">Book a Consultation</a>
+            <a href="#work"    class="btn btn--ghost">View Our Work</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Decorative scroll indicator line -->
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span class="scroll-line"></span>
+      </div>
+
+    </section>
+
+
+    <!-- ============================================================
+         2. SERVICES
+         ============================================================ -->
+    <section class="section services" id="services" aria-labelledby="services-heading">
+      <div class="container">
+
+        <div class="section-header animate-on-scroll">
+          <p class="section-eyebrow">What We Do</p>
+          <h2 class="section-heading" id="services-heading">Every project. Exactly right.</h2>
+          <p class="section-subhead">
+            From blueprint review to final calibration, Visus AV handles every phase of your
+            direct-view LED installation — with the discretion and craft your home deserves.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+
+          <!-- ——— SERVICE CARD: New Construction ——— -->
+          <!-- SERVICE IMAGE: replace assets/images/service-newbuild.jpg
+               Recommend: construction site or pristine room with LED infrastructure. -->
+          <article class="card animate-on-scroll">
+            <div class="card__image-wrap">
+              <img
+                src="assets/images/service-newbuild.jpg"
+                alt="Architectural drawings and open wall framing during custom home construction"
+                class="card__image"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">New Construction</h3>
+              <p class="card__text">
+                Collaborating with your builder or architect from day one, we integrate
+                structural backing, conduit pathways, and power planning before the drywall
+                goes up — so nothing is ever an afterthought.
+              </p>
+              <a href="#contact" class="card__link">Start the conversation <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <!-- ——— SERVICE CARD: Home Theater Upgrades ——— -->
+          <!-- SERVICE IMAGE: replace assets/images/service-theater.jpg
+               Recommend: finished home theater with LED wall, dark ambient lighting. -->
+          <article class="card animate-on-scroll">
+            <div class="card__image-wrap">
+              <img
+                src="assets/images/service-theater.jpg"
+                alt="Luxury home theater featuring a seamless direct-view LED video wall"
+                class="card__image"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Home Theater Upgrades</h3>
+              <p class="card__text">
+                Retiring a projector or a display wall? We design a direct-view LED system
+                that fills your screen wall completely — no screen door, no hot spot, no
+                ambient-light compromise.
+              </p>
+              <a href="#contact" class="card__link">Start the conversation <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <!-- ——— SERVICE CARD: Living & Media Room Displays ——— -->
+          <!-- SERVICE IMAGE: replace assets/images/service-livingroom.jpg
+               Recommend: elegant living room with LED display as a statement piece. -->
+          <article class="card animate-on-scroll">
+            <div class="card__image-wrap">
+              <img
+                src="assets/images/service-livingroom.jpg"
+                alt="Contemporary luxury living room with a statement LED display wall"
+                class="card__image"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Living &amp; Media Room Displays</h3>
+              <p class="card__text">
+                A statement wall that works as hard as it looks. Whether you want art mode,
+                ambient scenes, or 4K content at any hour, our installations disappear into
+                your design — until they don't.
+              </p>
+              <a href="#contact" class="card__link">Start the conversation <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <!-- ============================================================
+               SERVICE CARD: Live Events & Rentals
+               NOTE TO EDITOR: This card is intentionally isolated so it
+               can be cleanly removed. If Visus AV stops offering event
+               services, delete the entire <article> block below — from
+               the opening HTML comment to END LIVE EVENTS card comment.
+               ============================================================ -->
+          <!-- SERVICE CARD: Live Events & Rentals — REMOVE THIS ENTIRE ARTICLE IF NOT OFFERED -->
+          <!-- SERVICE IMAGE: replace assets/images/service-events.jpg
+               Recommend: outdoor evening screening event or upscale venue. -->
+          <article class="card animate-on-scroll" data-service="events">
+            <div class="card__image-wrap">
+              <img
+                src="assets/images/custom-wall-configuration.png"
+                alt="Custom wall configuration"
+                class="card__image"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+            </div>
+                  <div class="card__body">
+          <h3 class="card__title">Custom Wall Configurations</h3>
+          <p class="card__text">
+            Not every space calls for a standard rectangle. We design walls built around 
+            your room — portrait, panoramic, or a single surface that splits into two 
+            independent 16×9 feeds.
+          </p>
+          <a href="#contact" class="card__link">Tell us about your space <span aria-hidden="true">→</span></a>
+        </div>
+          </article>
+          <!-- END LIVE EVENTS & RENTALS CARD -->
+
+        </div><!-- /.cards-grid -->
+      </div><!-- /.container -->
+    </section>
+
+
+    <!-- ============================================================
+         3. WHY DIRECT-VIEW LED
+         ============================================================ -->
+    <section class="section why-led" id="why-led" aria-labelledby="why-led-heading">
+      <div class="container">
+        <div class="why-led__inner">
+
+          <div class="section-header section-header--left animate-on-scroll">
+            <p class="section-eyebrow">The Technology</p>
+            <h2 class="section-heading" id="why-led-heading">Why direct-view LED?</h2>
+            <p class="section-subhead">
+              Not every display technology belongs in a luxury home. Direct-view LED
+              was built for environments where image quality is non-negotiable.
+            </p>
+          </div>
+
+          <div class="features-grid">
+
+            <div class="feature animate-on-scroll">
+              <div class="feature__icon" aria-hidden="true">
+                <!-- Icon: seamless grid -->
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                  <rect x="4" y="4" width="32" height="32" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <line x1="4" y1="20" x2="36" y2="20" stroke="currentColor" stroke-width="1.5"/>
+                  <line x1="20" y1="4" x2="20" y2="36" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <h3 class="feature__title">Seamless at Any Size</h3>
+              <p class="feature__text">
+                No bezels, no seams, no visible tile lines. Direct-view LED panels tile
+                invisibly from 80 inches to 30 feet and beyond — scaling to your wall,
+                not the other way around.
+              </p>
+            </div>
+
+            <div class="feature animate-on-scroll">
+              <div class="feature__icon" aria-hidden="true">
+                <!-- Icon: sun/brightness -->
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                  <circle cx="20" cy="20" r="7" stroke="currentColor" stroke-width="1.5"/>
+                  <line x1="20" y1="4"  x2="20" y2="8"  stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <line x1="20" y1="32" x2="20" y2="36" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <line x1="4"  y1="20" x2="8"  y2="20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <line x1="32" y1="20" x2="36" y2="20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <line x1="9.17"  y1="9.17"  x2="11.99" y2="11.99" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <line x1="28.01" y1="28.01" x2="30.83" y2="30.83" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <line x1="30.83" y1="9.17"  x2="28.01" y2="11.99" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <line x1="11.99" y1="28.01" x2="9.17"  y2="30.83" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="feature__title">Brilliant in Any Light</h3>
+              <p class="feature__text">
+                With peak brightness exceeding 1,000 nits, your display remains vivid and
+                high-contrast even in a sun-drenched great room — no blackout shades required.
+              </p>
+            </div>
+
+            <div class="feature animate-on-scroll">
+              <div class="feature__icon" aria-hidden="true">
+                <!-- Icon: color gamut triangle -->
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                  <path d="M20 6L35 32H5L20 6Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                  <circle cx="20" cy="21" r="3" fill="currentColor" opacity="0.6"/>
+                </svg>
+              </div>
+              <h3 class="feature__title">True Black, True Color</h3>
+              <p class="feature__text">
+                Each pixel is self-emissive, achieving genuine blacks and a wide color gamut
+                that no projector or edge-lit panel can match — even at 4K HDR.
+              </p>
+            </div>
+
+            <div class="feature animate-on-scroll">
+              <div class="feature__icon" aria-hidden="true">
+                <!-- Icon: shield / longevity -->
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                  <path d="M20 4L6 10V22C6 29.73 12.27 36.87 20 38C27.73 36.87 34 29.73 34 22V10L20 4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                  <polyline points="14,20 18,24 26,16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="feature__title">Built to Last</h3>
+              <p class="feature__text">
+                Commercial-grade LED modules are rated for 100,000+ hours of operation with
+                no lamp replacements, no lens degradation, and no perceptible dimming over time.
+              </p>
+            </div>
+
+          </div><!-- /.features-grid -->
+        </div><!-- /.why-led__inner -->
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         4. PORTFOLIO / WORK
+         ============================================================ -->
+    <section class="section portfolio" id="work" aria-labelledby="portfolio-heading">
+      <div class="container">
+
+        <div class="section-header animate-on-scroll">
+          <p class="section-eyebrow">Portfolio & Visus AV Designs
+          <h2 class="section-heading" id="portfolio-heading">Your Wall, Reimagined</h2>
+          <p class="section-subhead">
+            <em>Each project is unique. </em>See how a single surface shifts from art gallery canvas to game-day ready. 
+          </p>
+        </div>
+
+        <!-- ============================================================
+             BEFORE/AFTER COMPARISON GRID
+             Each tile shows the "In Use" photo with a "Click to Compare"
+             badge; clicking it opens the lightbox, where the full
+             drag-to-compare slider lives. main.js builds everything from
+             the data attributes below:
+
+               data-before     = "Art Mode" photo (wall off / displaying
+                                 art) — revealed LEFT of the divider
+               data-after      = "In Use" photo (wall on — news, sports,
+                                 film) — revealed RIGHT of the divider,
+                                 and used as the grid thumbnail
+               data-alt-before / data-alt-after = alt text per photo
+
+             IMPORTANT: shoot both photos from the SAME camera position
+             and crop so the two frames align — in the lightbox they are
+             layered exactly on top of each other and wiped, never
+             resized or distorted.
+
+             To swap photos on an item, just change its data-before /
+             data-after paths. To add a project, duplicate an entire
+             <figure> block and update its attributes + caption.
+             ============================================================ -->
+        <div class="portfolio-grid">
+
+          <!-- ——— PORTFOLIO ITEM 1: Malibu Estate ———
+               Art Mode photo: assets/images/portfolio-01-art.jpg
+               In Use photo:   assets/images/portfolio-01-on.jpg -->
+          <figure class="portfolio-item animate-on-scroll">
+            <div
+              class="comparison-preview"
+              data-before="assets/images/portfolio-01-art.jpg"
+              data-after="assets/images/portfolio-01-on.jpg"
+              data-alt-before="Malibu estate great room LED wall in Art Mode, displaying a gallery painting"
+              data-alt-after="Malibu estate great room LED wall in use, playing a film"
+            ></div>
+            <figcaption class="portfolio-item__caption">
+              <span class="portfolio-item__label">Malibu Estate — Great Room</span>
+              <span class="portfolio-item__detail">192″ × 108″ &middot; 1.5 mm pitch</span>
+            </figcaption>
+          </figure>
+          <!-- ——— END PORTFOLIO ITEM 1 ——— -->
+
+          <!-- ——— PORTFOLIO ITEM 2: Beverly Hills ———
+               Art Mode photo: assets/images/portfolio-02-art.jpg
+               In Use photo:   assets/images/portfolio-02-on.jpg -->
+          <figure class="portfolio-item animate-on-scroll">
+            <div
+              class="comparison-preview"
+              data-before="assets/images/portfolio-02-art.jpg"
+              data-after="assets/images/portfolio-02-on.jpg"
+              data-alt-before="Beverly Hills home theater LED wall in Art Mode, showing a still artwork"
+              data-alt-after="Beverly Hills home theater LED wall in use during a screening"
+            ></div>
+            <figcaption class="portfolio-item__caption">
+              <span class="portfolio-item__label">Beverly Hills — Home Theater</span>
+              <span class="portfolio-item__detail">144″ × 81″ &middot; 1.2 mm pitch</span>
+            </figcaption>
+          </figure>
+          <!-- ——— END PORTFOLIO ITEM 2 ——— -->
+
+          <!-- ——— PORTFOLIO ITEM 3: Newport Beach ———
+               Art Mode photo: assets/images/portfolio-03-art.jpg
+               In Use photo:   assets/images/portfolio-03-on.jpg -->
+          <figure class="portfolio-item animate-on-scroll">
+            <div
+              class="comparison-preview"
+              data-before="assets/images/portfolio-03-art.jpg"
+              data-after="assets/images/portfolio-03-on.jpg"
+              data-alt-before="Newport Beach living room LED wall in Art Mode, blending in as framed art"
+              data-alt-after="Newport Beach living room LED wall in use, showing live sports"
+            ></div>
+            <figcaption class="portfolio-item__caption">
+              <span class="portfolio-item__label">Newport Beach — Living Room</span>
+              <span class="portfolio-item__detail">108″ × 60″ &middot; 1.8 mm pitch</span>
+            </figcaption>
+          </figure>
+          <!-- ——— END PORTFOLIO ITEM 3 ——— -->
+
+          <!-- ——— PORTFOLIO ITEM 4: Montecito ———
+               Art Mode photo: assets/images/portfolio-04-art.jpg
+               In Use photo:   assets/images/portfolio-04-on.jpg -->
+          <figure class="portfolio-item animate-on-scroll">
+            <div
+              class="comparison-preview"
+              data-before="assets/images/portfolio-04-art.jpg"
+              data-after="assets/images/portfolio-04-on.jpg"
+              data-alt-before="Montecito covered patio LED wall in Art Mode, displaying landscape art"
+              data-alt-after="Montecito covered patio LED wall in use for an evening broadcast"
+            ></div>
+            <figcaption class="portfolio-item__caption">
+              <span class="portfolio-item__label">Montecito — Covered Patio</span>
+              <span class="portfolio-item__detail">120″ × 68″ &middot; IP-rated outdoor</span>
+            </figcaption>
+          </figure>
+          <!-- ——— END PORTFOLIO ITEM 4 ——— -->
+
+          <!-- ——— PORTFOLIO ITEM 5: Rancho Santa Fe ———
+               Art Mode photo: assets/images/portfolio-05-art.jpg
+               In Use photo:   assets/images/portfolio-05-on.jpg -->
+          <figure class="portfolio-item animate-on-scroll">
+            <div
+              class="comparison-preview"
+              data-before="assets/images/portfolio-05-art.jpg"
+              data-after="assets/images/portfolio-05-on.jpg"
+              data-alt-before="Rancho Santa Fe primary suite LED display in Art Mode, showing quiet art"
+              data-alt-after="Rancho Santa Fe primary suite LED display in use, playing the morning news"
+            ></div>
+            <figcaption class="portfolio-item__caption">
+              <span class="portfolio-item__label">Rancho Santa Fe — Primary Suite</span>
+              <span class="portfolio-item__detail">96″ × 54″ &middot; 1.5 mm pitch</span>
+            </figcaption>
+          </figure>
+          <!-- ——— END PORTFOLIO ITEM 5 ——— -->
+
+          <!-- ——— PORTFOLIO ITEM 6: Bel Air ———
+               Art Mode photo: assets/images/portfolio-06-art.jpg
+               In Use photo:   assets/images/portfolio-06-on.jpg -->
+          <figure class="portfolio-item animate-on-scroll">
+            <div
+              class="comparison-preview"
+              data-before="assets/images/portfolio-06-art.jpg"
+              data-after="assets/images/portfolio-06-on.jpg"
+              data-alt-before="Bel Air estate outdoor LED wall in Art Mode before the screening begins"
+              data-alt-after="Bel Air estate outdoor LED wall in use during a private film screening"
+            ></div>
+            <figcaption class="portfolio-item__caption">
+              <span class="portfolio-item__label">Bel Air — Private Screening</span>
+              <span class="portfolio-item__detail">240″ × 135″ &middot; Event rental</span>
+            </figcaption>
+          </figure>
+          <!-- ——— END PORTFOLIO ITEM 6 ——— -->
+
+        </div><!-- /.portfolio-grid -->
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         5. PROCESS
+         ============================================================ -->
+    <section class="section process" id="process" aria-labelledby="process-heading">
+      <div class="container">
+
+        <div class="section-header animate-on-scroll">
+          <p class="section-eyebrow">How It Works</p>
+          <h2 class="section-heading" id="process-heading">From first call to final frame.</h2>
+          <p class="section-subhead">
+            A four-step process refined over years of high-end commercial integration —
+            now applied with residential precision.
+          </p>
+        </div>
+
+        <ol class="process-steps" aria-label="Our installation process">
+
+          <li class="process-step animate-on-scroll">
+            <div class="process-step__number" aria-hidden="true">01</div>
+            <div class="process-step__content">
+              <h3 class="process-step__title">Consultation</h3>
+              <p class="process-step__text">
+                We visit your space — or review architectural drawings if you're in early
+                construction — to understand your vision, viewing habits, room conditions,
+                and how the display will live within your interior design. No hard sell.
+                Just clarity.
+              </p>
+            </div>
+          </li>
+
+          <li class="process-step animate-on-scroll">
+            <div class="process-step__number" aria-hidden="true">02</div>
+            <div class="process-step__content">
+              <h3 class="process-step__title">Design</h3>
+              <p class="process-step__text">
+                We specify the right pixel pitch, aspect ratio, and cabinet configuration
+                for your room. Our proposal includes detailed drawings, materials specs,
+                and a transparent, itemized quote — coordinated with your builder, GC,
+                or designer as needed.
+              </p>
+            </div>
+          </li>
+
+          <li class="process-step animate-on-scroll">
+            <div class="process-step__number" aria-hidden="true">03</div>
+            <div class="process-step__content">
+              <h3 class="process-step__title">Installation</h3>
+              <p class="process-step__text">
+                Our crew arrives on schedule, works cleanly within your home, and
+                coordinates directly with your trades. We handle structural mounting,
+                cable routing, power management, and source integration — end to end.
+              </p>
+            </div>
+          </li>
+
+          <li class="process-step animate-on-scroll">
+            <div class="process-step__number" aria-hidden="true">04</div>
+            <div class="process-step__content">
+              <h3 class="process-step__title">Calibration &amp; Support</h3>
+              <p class="process-step__text">
+                Every Visus AV wall is professionally calibrated for color accuracy,
+                brightness uniformity, and gamma before handoff. We train you and your
+                household staff, then remain available for ongoing support and firmware
+                updates.
+              </p>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         6. ABOUT
+         ============================================================ -->
+    <section class="section about" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about__inner">
+
+          <!-- ABOUT IMAGE: replace assets/images/about.jpg
+               Recommend: a genuine portrait of the founder in a finished
+               installation, or a candid working shot. Avoid stock photos. -->
+          <div class="about__image-col animate-on-scroll">
+            <img
+              src="assets/images/about.jpg"
+              alt="Founder of Visus AV reviewing a custom LED installation in a California residence"
+              class="about__image"
+              loading="lazy"
+              width="700"
+              height="900"
+            />
+          </div>
+
+          <div class="about__copy-col animate-on-scroll">
+            <p class="section-eyebrow">About Visus AV</p>
+            <h2 class="section-heading" id="about-heading">
+              Built on experience.<br><em>Delivered with precision.</em>
+            </h2>
+            <div class="about__body">
+              <p>
+                Visus AV was founded in California by a veteran of commercial AV integration
+                and enterprise-level display sales. After more than a decade designing
+                boardrooms, command centers, and large-scale broadcast environments for
+                corporate clients, we saw a clear gap in the residential market: the
+                technology had arrived, but the expertise and white-glove service had not.
+              </p>
+              <p>
+                We built Visus AV to fill that gap. We bring the same rigorous project
+                management, pre-construction coordination, and post-installation support
+                that Fortune 500 clients expect — to your home, your timeline, and your
+                standards.
+              </p>
+              <p>
+                Our partnerships with custom home builders, licensed architects, and
+                interior design firms mean we can enter a project at any stage — from
+                blueprint to final furnishings — and deliver seamlessly. We are licensed,
+                insured, and committed to a level of craft that matches the caliber of
+                the homes we work in.
+              </p>
+            </div>
+
+            <div class="about__credentials">
+              <!-- CREDENTIAL: Update license number once issued. California law requires
+                   the CSLB number in all advertising. -->
+              <div class="credential">
+                <span class="credential__label">CSLB License</span>
+                <span class="credential__value">[LICENSE NUMBER PLACEHOLDER]</span>
+              </div>
+              <div class="credential">
+                <span class="credential__label">Service Area</span>
+                <span class="credential__value">Greater Los Angeles &middot; Orange County &middot; San Diego &middot; Santa Barbara</span>
+              </div>
+              <div class="credential">
+                <span class="credential__label">Partnerships</span>
+                <span class="credential__value">Custom Builders &middot; Licensed Architects &middot; Interior Designers</span>
+              </div>
+            </div>
+
+            <a href="#contact" class="btn btn--primary">Work With Us</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         7. CONTACT
+         ============================================================ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact__inner">
+
+          <div class="contact__intro animate-on-scroll">
+            <p class="section-eyebrow">Get in Touch</p>
+            <h2 class="section-heading" id="contact-heading">
+              Let's talk about<br>your project.
+            </h2>
+            <p class="contact__subhead">
+              Every direct-view LED installation starts with a conversation. Tell us about
+              your space and vision — we'll respond within one business day.
+            </p>
+
+            <address class="contact__details">
+              <!-- PHONE: replace with your actual number -->
+              <a href="tel:+13105550123" class="contact__detail-link">
+                <span class="contact__detail-label">Phone</span>
+                <span class="contact__detail-value">(310) 555-0123</span>
+              </a>
+              <!-- EMAIL: replace with your actual address -->
+              <a href="mailto:hello@visusav.com" class="contact__detail-link">
+                <span class="contact__detail-label">Email</span>
+                <span class="contact__detail-value">hello@visusav.com</span>
+              </a>
+              <span class="contact__detail-link">
+                <span class="contact__detail-label">Service Area</span>
+                <span class="contact__detail-value">Southern California &amp; Greater LA</span>
+              </span>
+            </address>
+          </div>
+
+          <div class="contact__form-col animate-on-scroll">
+            <!--
+              TODO: Wire up form submission before going live.
+
+              Option A — Netlify Forms (zero config on Netlify hosting):
+                Add  netlify  and  name="contact"  attributes to <form>.
+
+              Option B — Formspree (works anywhere):
+                Set  action="https://formspree.io/f/YOUR_FORM_ID"  method="POST"  on <form>,
+                remove the novalidate attribute, and delete the JS submit handler below.
+
+              Option C — EmailJS (client-side only, no server needed):
+                Load the EmailJS SDK in <head>, then replace the stub in main.js
+                with emailjs.sendForm('SERVICE_ID', 'TEMPLATE_ID', this).
+
+              Option D — Custom serverless function:
+                POST a JSON body to your own /api/contact endpoint.
+
+              The JS validation and feedback UI in main.js work for all options.
+            -->
+            <form class="contact-form" id="contact-form" novalidate>
+
+              <div class="form-row form-row--2col">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Name</label>
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    class="form-input"
+                    placeholder="Your full name"
+                    autocomplete="name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    class="form-input"
+                    placeholder="your@email.com"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-phone" class="form-label">
+                  Phone <span class="form-label--optional">(optional)</span>
+                </label>
+                <input
+                  type="tel"
+                  id="contact-phone"
+                  name="phone"
+                  class="form-input"
+                  placeholder="(310) 555-0000"
+                  autocomplete="tel"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-project-type" class="form-label">Project Type</label>
+                <select
+                  id="contact-project-type"
+                  name="projectType"
+                  class="form-input form-select"
+                  required
+                >
+                  <option value="" disabled selected>Select a project type</option>
+                  <option value="new-construction">New Construction</option>
+                  <option value="theater-upgrade">Home Theater Upgrade</option>
+                  <option value="living-room">Living / Media Room Display</option>
+                  <option value="events-rental">Live Events &amp; Rental</option>
+                  <option value="other">Other / Not Sure Yet</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Tell us about your project</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  class="form-input form-textarea"
+                  placeholder="Room dimensions, current setup, timeline, budget range — anything helps."
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--full" id="contact-submit">
+                Send Message
+              </button>
+
+              <!-- Feedback message — shown and hidden by main.js -->
+              <p class="form-feedback" id="form-feedback" role="alert" aria-live="polite"></p>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer__inner">
+
+        <div class="footer__brand">
+          <a href="#" class="footer__wordmark" aria-label="Visus AV — Home">Visus AV</a>
+          <p class="footer__tagline">See it as it's meant to be seen.</p>
+          <!-- CSLB LICENSE: California law requires the contractor license
+               number in all advertising. Replace placeholder below. -->
+          <p class="footer__license">CSLB License #&nbsp;[PLACEHOLDER]</p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <h3 class="footer__nav-heading">Navigate</h3>
+          <ul class="footer__nav-list">
+            <li><a href="#services" class="footer__nav-link">Services</a></li>
+            <li><a href="#why-led"  class="footer__nav-link">Why LED</a></li>
+            <li><a href="#work"     class="footer__nav-link">Portfolio</a></li>
+            <li><a href="#process"  class="footer__nav-link">Process</a></li>
+            <li><a href="#about"    class="footer__nav-link">About</a></li>
+            <li><a href="#contact"  class="footer__nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__contact">
+          <h3 class="footer__nav-heading">Contact</h3>
+          <address class="footer__address">
+            <!-- PHONE: replace with actual number -->
+            <a href="tel:+13105550123"      class="footer__contact-link">(310) 555-0123</a>
+            <!-- EMAIL: replace with actual address -->
+            <a href="mailto:hello@visusav.com" class="footer__contact-link">hello@visusav.com</a>
+            <span class="footer__service-area">Southern California</span>
+          </address>
+        </div>
+
+        <div class="footer__social">
+          <h3 class="footer__nav-heading">Follow</h3>
+          <div class="footer__social-links">
+            <!-- SOCIAL LINKS: replace href values with your actual profile URLs -->
+            <a href="https://instagram.com/visusav"          class="footer__social-link" aria-label="Visus AV on Instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://houzz.com/visusav"              class="footer__social-link" aria-label="Visus AV on Houzz"     target="_blank" rel="noopener noreferrer">Houzz</a>
+            <a href="https://linkedin.com/company/visusav"   class="footer__social-link" aria-label="Visus AV on LinkedIn"  target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </div>
+
+      </div><!-- /.footer__inner -->
+
+      <div class="footer__bottom">
+        <p class="footer__legal">
+          &copy; <span id="footer-year"></span> Visus AV. All rights reserved.
+          California-based direct-view LED integration.
+        </p>
+        <!-- PRIVACY POLICY: uncomment when you have a privacy policy page -->
+        <!-- <a href="/privacy" class="footer__legal-link">Privacy Policy</a> -->
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       PORTFOLIO LIGHTBOX (shared)
+       ONE reusable dialog serves every portfolio item — main.js
+       fills it with the clicked project's photos and caption, so
+       there is nothing per-project to edit here.
+       ============================================================ -->
+  <div
+    class="lightbox"
+    id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="lightbox-caption"
+    hidden
+  >
+    <!-- Dimmed backdrop — clicking it closes the lightbox -->
+    <div class="lightbox__backdrop" id="lightbox-backdrop" aria-hidden="true"></div>
+
+    <div class="lightbox__panel">
+      <button
+        type="button"
+        class="lightbox__close"
+        id="lightbox-close"
+        aria-label="Close enlarged view"
+      >
+        <!-- X icon, drawn inline — no icon library -->
+        <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" fill="none">
+          <path d="M1.5 1.5L14.5 14.5M14.5 1.5L1.5 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <!-- main.js injects the enlarged comparison slider here -->
+      <div class="comparison comparison--lightbox" id="lightbox-comparison"></div>
+
+      <!-- main.js copies the clicked project's caption here -->
+      <div class="lightbox__caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
