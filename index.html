@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- auto-commit hook test -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -226,7 +225,7 @@
               />
             </div>
             <div class="card__body">
-              <h3 class="card__title">Living &amp; Media Room Displays</h3>
+              <h3 class="card__title">Living &amp; Media Rooms</h3>
               <p class="card__text">
                 A statement wall that works as hard as it looks. Whether you want art mode,
                 ambient scenes, or 4K content at any hour, our installations disappear into
@@ -248,14 +247,33 @@
                Recommend: outdoor evening screening event or upscale venue. -->
           <article class="card animate-on-scroll" data-service="events">
             <div class="card__image-wrap">
-              <img
-                src="assets/images/custom-wall-configuration.png"
-                alt="Custom wall configuration"
-                class="card__image"
-                loading="lazy"
-                width="600"
-                height="400"
-              />
+              <!-- ============================================================
+                   AUTO-CROSSFADE
+                   Gently fades back and forth between the unified wall and
+                   the same surface split into two independent 16×9 feeds —
+                   no click, no slider. Driven on a timer by main.js (see the
+                   "CARD CROSSFADE" block). The FIRST image carries is-active;
+                   it shows before JS runs and if JS is disabled.
+                   To swap either photo, just change its src.
+                   ============================================================ -->
+              <div class="card__crossfade">
+                <img
+                  src="assets/images/custom-wall-configuration.png"
+                  alt="Custom LED wall configured as a single unified display"
+                  class="card__image card__crossfade-img is-active"
+                  loading="lazy"
+                  width="600"
+                  height="400"
+                />
+                <img
+                  src="assets/images/custom-build-split-screen.jpg"
+                  alt="The same custom LED wall split into two independent 16×9 displays"
+                  class="card__image card__crossfade-img"
+                  loading="lazy"
+                  width="600"
+                  height="400"
+                />
+              </div>
             </div>
                   <div class="card__body">
           <h3 class="card__title">Custom Wall Configurations</h3>
@@ -620,24 +638,31 @@
             </h2>
             <div class="about__body">
               <p>
-                Visus AV was founded in California by a veteran of commercial AV integration
-                and enterprise-level display sales. After more than a decade designing
-                boardrooms, command centers, and large-scale broadcast environments for
-                corporate clients, we saw a clear gap in the residential market: the
-                technology had arrived, but the expertise and white-glove service had not.
+                Founded in California, Visus AV is built on more than a decade of designing 
+                audiovisual experiences at the highest level. After studying Cinema Media Arts 
+                in Los Angeles, its founder began his career as an audio engineer — developing 
+                an exacting sense of what makes a system look and sound extraordinary that still 
+                shapes every Visus AV installation today.
               </p>
               <p>
-                We built Visus AV to fill that gap. We bring the same rigorous project
-                management, pre-construction coordination, and post-installation support
-                that Fortune 500 clients expect — to your home, your timeline, and your
-                standards.
+                His work spans the homes of the Hollywood elite across Bel-Air, Beverly Hills, 
+                and Malibu, private luxury yachts, and the AV operations of professional NFL 
+                and NBA franchises, NFL broadcast companies, entertainment and video game companies, 
+                and Fortune 500 brands. Across those projects he has worked every stage — design, 
+                programming, installation, commissioning, and sales — in environments where discretion 
+                and flawless execution are simply expected.
               </p>
               <p>
-                Our partnerships with custom home builders, licensed architects, and
-                interior design firms mean we can enter a project at any stage — from
-                blueprint to final furnishings — and deliver seamlessly. We are licensed,
-                insured, and committed to a level of craft that matches the caliber of
-                the homes we work in.
+                That experience revealed a clear gap in the residential market: the technology had 
+                arrived, but the expertise and white-glove service had not. Visus AV brings the same 
+                rigorous project management and support Fortune 500 clients expect to your home, your 
+                timeline, and your standards.
+                </p>
+                <p>
+                Through partnerships with custom home builders, architects, and interior designers, 
+                we enter a project at any stage — from blueprint to final calibration — and deliver 
+                seamlessly. Licensed, insured, and committed to a level of craft that matches the 
+                caliber of the homes we work in.
               </p>
             </div>
 

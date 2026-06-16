@@ -126,6 +126,51 @@
 
 
   /* ----------------------------------------------------------
+     3b. CARD CROSSFADE — auto-fading image stacks
+     Any .card__crossfade with 2+ .card__crossfade-img children
+     gently fades between them on a timer (same idea as the hero
+     slideshow, just scoped to a card). Respects reduced-motion —
+     the first image simply stays — and pauses while the tab is
+     hidden so frames don't pile up off-screen.
+     ---------------------------------------------------------- */
+  var crossfades = document.querySelectorAll('.card__crossfade');
+
+  if (crossfades.length && !prefersReducedMotion) {
+
+    var CROSSFADE_INTERVAL = 3500; // ms each image holds before fading — tweak to taste
+
+    crossfades.forEach(function (group) {
+      var imgs = group.querySelectorAll('.card__crossfade-img');
+      if (imgs.length < 2) return;
+
+      var index = 0;
+      var timer = null;
+
+      function advance() {
+        imgs[index].classList.remove('is-active');
+        index = (index + 1) % imgs.length;
+        imgs[index].classList.add('is-active');
+      }
+
+      function start() {
+        if (timer === null) { timer = setInterval(advance, CROSSFADE_INTERVAL); }
+      }
+
+      function stop() {
+        clearInterval(timer);
+        timer = null;
+      }
+
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) { stop(); } else { start(); }
+      });
+
+      start();
+    });
+  }
+
+
+  /* ----------------------------------------------------------
      4. SCROLL ANIMATIONS — IntersectionObserver
      When an element with .animate-on-scroll enters the viewport,
      .is-visible is added, triggering the CSS fade+slide-up.
