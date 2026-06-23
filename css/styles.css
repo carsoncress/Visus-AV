@@ -486,8 +486,8 @@ address { font-style: normal; }
   inset: -5%;
   background-color: var(--color-surface-2);
   background-size: cover;
-  /* Frame the right 2/3 of the photo — that's where the video walls sit */
-  background-position: 70% center;
+  /* Frame the right of the photo — that's where the video walls sit */
+  background-position: 88% center;
   background-repeat: no-repeat;
   opacity: 0;
   transition: opacity 1.6s var(--ease-out-expo);
@@ -497,8 +497,8 @@ address { font-style: normal; }
 .hero__slide.is-active {
   opacity: 1;
   /* Slow cinematic drift while a slide is on screen, zooming into the
-     right 2/3 of the frame where the video walls are */
-  transform-origin: 70% center;
+     right of the frame where the video walls are */
+  transform-origin: 88% center;
   animation: heroDrift 7s ease-out both;
 }
 
