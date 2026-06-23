@@ -1493,10 +1493,12 @@ a.contact__detail-link:hover .contact__detail-value {
     padding-block: var(--space-12);
   }
 
-  /* About — image left, copy right */
+  /* About — image left, copy right. Wider image column so the full
+     3:4 portrait renders larger and reaches further down alongside
+     the copy (the photo is shown whole — no cropping). */
   .about__inner {
-    grid-template-columns: 5fr 7fr;
-    gap: clamp(3rem, 7vw, 8rem);
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2.5rem, 5vw, 5rem);
   }
 
   /* Contact — left info, right form */

@@ -94,24 +94,24 @@
 
       <!-- ============================================================
            HERO SLIDESHOW
-           The background cross-fades through up to 8 slides.
+           The background cross-fades through the slides below.
 
-           TO ADD/REMOVE SLIDES: just drop numbered images into
-             assets/images/ named hero-1.jpg, hero-2.jpg … hero-8.jpg.
-             js/main.js auto-detects how many exist (1 through 8,
-             stopping at the first gap) and cycles through them,
-             looping back to the first after the last one it finds.
-             No HTML edits needed.
-
-           The first slide below is a no-JS / pre-load fallback; once the
-           script runs it rebuilds this container from the detected files.
+           TO ADD A SLIDE: copy any .hero__slide line and point its
+             background-image at a new file (e.g. assets/images/hero-5.jpg).
+           TO REMOVE A SLIDE: delete its line.
+           ORDER = display order. Give the FIRST slide the "is-active"
+             class — it shows first and is what appears before the
+             JavaScript runs (and if JS is disabled).
 
            Cycle speed is set by HERO_INTERVAL in js/main.js.
            Recommended images: 2560×1440 or larger, dramatic installed
-           LED walls with the wall toward the right of the frame.
+           LED walls with darker edges so the headline stays legible.
            ============================================================ -->
       <div class="hero__slides" aria-hidden="true">
         <div class="hero__slide is-active" style="background-image: url('assets/images/hero-1.jpg');"></div>
+        <div class="hero__slide"           style="background-image: url('assets/images/hero-2.jpg');"></div>
+        <div class="hero__slide"           style="background-image: url('assets/images/hero-3.jpg');"></div>
+        <div class="hero__slide"           style="background-image: url('assets/images/hero-4.jpg');"></div>
       </div>
       <div class="hero__overlay" aria-hidden="true"></div>
 
@@ -303,8 +303,7 @@
             <p class="section-eyebrow">The Technology</p>
             <h2 class="section-heading" id="why-led-heading">Why direct-view LED?</h2>
             <p class="section-subhead">
-              Not every display technology belongs in a luxury home. Direct-view LED
-              was built for environments where image quality is non-negotiable.
+              Direct-view LED was built for residential environments where image quality is non-negotiable.
             </p>
           </div>
 
@@ -322,7 +321,7 @@
               <h3 class="feature__title">Seamless at Any Size</h3>
               <p class="feature__text">
                 No bezels, no seams, no visible tile lines. Direct-view LED panels tile
-                invisibly from 80 inches to 30 feet and beyond — scaling to your wall,
+                invisibly from 120 inches to 30 feet and beyond — scaling to your wall,
                 not the other way around.
               </p>
             </div>
@@ -359,8 +358,10 @@
               </div>
               <h3 class="feature__title">True Black, True Color</h3>
               <p class="feature__text">
-                Each pixel is self-emissive, achieving genuine blacks and a wide color gamut
-                that no projector or edge-lit panel can match — even at 4K HDR.
+                Each pixel is self-emissive and individually controlled, 
+                achieving genuine blacks and a wide color gamut that no 
+                projector or edge-lit panel can match — even in a fully lit 
+                room at 4K HDR.
               </p>
             </div>
 
@@ -374,8 +375,8 @@
               </div>
               <h3 class="feature__title">Built to Last</h3>
               <p class="feature__text">
-                Commercial-grade LED modules are rated for 100,000+ hours of operation with
-                no lamp replacements, no lens degradation, and no perceptible dimming over time.
+                Built with commercial-grade MIP modules, every wall is rated for 100,000+ hours and stays
+                fully serviceable for life — repaired at the pixel level, no factory batch-matching required.
               </p>
             </div>
 
@@ -526,8 +527,8 @@
               data-alt-after="Bel Air estate outdoor LED wall in use during a private film screening"
             ></div>
             <figcaption class="portfolio-item__caption">
-              <span class="portfolio-item__label">Bel Air — Private Screening</span>
-              <span class="portfolio-item__detail">240″ × 135″ &middot; Event rental</span>
+              <span class="portfolio-item__label">Bel Air — Living Room</span>
+              <span class="portfolio-item__detail">240" diagonal″ &middot; MIP modules</span>
             </figcaption>
           </figure>
           <!-- ——— END PORTFOLIO ITEM 6 ——— -->
