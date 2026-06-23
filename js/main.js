@@ -82,46 +82,106 @@
 
   /* ----------------------------------------------------------
      3. HERO — Background slideshow
-     Cross-fades through every .hero__slide in the markup. To add
-     or remove images, edit the slides in index.html — this code
-     adapts to however many exist (no JS changes needed).
+     Auto-detects the hero images on disk (assets/images/hero-1.jpg
+     through hero-8.jpg) and cross-fades through whichever exist.
+
+     Drop in hero-1.jpg … hero-8.jpg to add slides — no markup
+     changes needed. Detection walks 1..8 and stops at the first
+     missing number, then the slideshow loops back to the first
+     after the last image it found. Fewer than 8? It just cycles
+     however many are present.
 
      The fade itself is CSS (opacity transition on .is-active);
      this just moves the .is-active class along on a timer.
      ---------------------------------------------------------- */
-  var heroSlides = document.querySelectorAll('.hero__slide');
+  var heroContainer = document.querySelector('.hero__slides');
 
-  // Need at least two slides, and respect reduced-motion (then the
-  // first slide simply stays put — no auto-advancing).
-  if (heroSlides.length > 1 && !prefersReducedMotion) {
+  if (heroContainer) {
+    var HERO_MAX = 8; // highest hero-N image we'll look for
+    // Try these extensions/cases — hosts can be case-sensitive.
+    var HERO_EXTS = ['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG'];
 
-    var HERO_INTERVAL = 6000; // ms each slide stays before fading — tweak to taste
-    var heroIndex = 0;
-    var heroTimer = null;
-
-    function advanceHero() {
-      heroSlides[heroIndex].classList.remove('is-active');
-      heroIndex = (heroIndex + 1) % heroSlides.length;
-      heroSlides[heroIndex].classList.add('is-active');
+    // Resolve hero-<index> to a loadable URL, trying each extension.
+    // Resolves to the working URL, or null if none load.
+    function resolveHeroImage(index) {
+      return new Promise(function (resolve) {
+        var ext = 0;
+        (function tryNext() {
+          if (ext >= HERO_EXTS.length) { resolve(null); return; }
+          var url = 'assets/images/hero-' + index + '.' + HERO_EXTS[ext];
+          var img = new Image();
+          img.onload = function () { resolve(url); };
+          img.onerror = function () { ext++; tryNext(); };
+          img.src = url;
+        })();
+      });
     }
 
-    function startHero() {
-      if (heroTimer === null) {
-        heroTimer = setInterval(advanceHero, HERO_INTERVAL);
+    // Walk hero-1, hero-2, … until one is missing; collect the URLs.
+    function detectHeroImages() {
+      return new Promise(function (resolve) {
+        var urls = [];
+        (function step(index) {
+          if (index > HERO_MAX) { resolve(urls); return; }
+          resolveHeroImage(index).then(function (url) {
+            if (!url) { resolve(urls); return; } // first gap → stop
+            urls.push(url);
+            step(index + 1);
+          });
+        })(1);
+      });
+    }
+
+    function buildHeroSlides(urls) {
+      heroContainer.innerHTML = '';
+      urls.forEach(function (url, i) {
+        var slide = document.createElement('div');
+        slide.className = 'hero__slide' + (i === 0 ? ' is-active' : '');
+        slide.style.backgroundImage = "url('" + url + "')";
+        heroContainer.appendChild(slide);
+      });
+    }
+
+    function startHeroSlideshow() {
+      var heroSlides = heroContainer.querySelectorAll('.hero__slide');
+
+      // Need at least two slides, and respect reduced-motion (then the
+      // first slide simply stays put — no auto-advancing).
+      if (heroSlides.length <= 1 || prefersReducedMotion) { return; }
+
+      var HERO_INTERVAL = 6000; // ms each slide stays before fading
+      var heroIndex = 0;
+      var heroTimer = null;
+
+      function advanceHero() {
+        heroSlides[heroIndex].classList.remove('is-active');
+        heroIndex = (heroIndex + 1) % heroSlides.length;
+        heroSlides[heroIndex].classList.add('is-active');
       }
+
+      function startHero() {
+        if (heroTimer === null) {
+          heroTimer = setInterval(advanceHero, HERO_INTERVAL);
+        }
+      }
+
+      function stopHero() {
+        clearInterval(heroTimer);
+        heroTimer = null;
+      }
+
+      // Pause while the tab is hidden so slides don't pile up off-screen
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) { stopHero(); } else { startHero(); }
+      });
+
+      startHero();
     }
 
-    function stopHero() {
-      clearInterval(heroTimer);
-      heroTimer = null;
-    }
-
-    // Pause while the tab is hidden so slides don't pile up off-screen
-    document.addEventListener('visibilitychange', function () {
-      if (document.hidden) { stopHero(); } else { startHero(); }
+    detectHeroImages().then(function (urls) {
+      if (urls.length) { buildHeroSlides(urls); }
+      startHeroSlideshow();
     });
-
-    startHero();
   }
 
 

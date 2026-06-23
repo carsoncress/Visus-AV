@@ -94,24 +94,24 @@
 
       <!-- ============================================================
            HERO SLIDESHOW
-           The background cross-fades through the slides below.
+           The background cross-fades through up to 8 slides.
 
-           TO ADD A SLIDE: copy any .hero__slide line and point its
-             background-image at a new file (e.g. assets/images/hero-5.jpg).
-           TO REMOVE A SLIDE: delete its line.
-           ORDER = display order. Give the FIRST slide the "is-active"
-             class — it shows first and is what appears before the
-             JavaScript runs (and if JS is disabled).
+           TO ADD/REMOVE SLIDES: just drop numbered images into
+             assets/images/ named hero-1.jpg, hero-2.jpg … hero-8.jpg.
+             js/main.js auto-detects how many exist (1 through 8,
+             stopping at the first gap) and cycles through them,
+             looping back to the first after the last one it finds.
+             No HTML edits needed.
+
+           The first slide below is a no-JS / pre-load fallback; once the
+           script runs it rebuilds this container from the detected files.
 
            Cycle speed is set by HERO_INTERVAL in js/main.js.
            Recommended images: 2560×1440 or larger, dramatic installed
-           LED walls with darker edges so the headline stays legible.
+           LED walls with the wall toward the right of the frame.
            ============================================================ -->
       <div class="hero__slides" aria-hidden="true">
         <div class="hero__slide is-active" style="background-image: url('assets/images/hero-1.jpg');"></div>
-        <div class="hero__slide"           style="background-image: url('assets/images/hero-2.jpg');"></div>
-        <div class="hero__slide"           style="background-image: url('assets/images/hero-3.jpg');"></div>
-        <div class="hero__slide"           style="background-image: url('assets/images/hero-4.jpg');"></div>
       </div>
       <div class="hero__overlay" aria-hidden="true"></div>
 
